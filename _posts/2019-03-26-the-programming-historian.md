@@ -15,20 +15,17 @@ A version control system is also nice to have.
 
 ![Why](http://www.phdcomics.com/comics/archive/phd1029.gif)
 
-## Boxes
-You can add notification, warning and error boxes like this:
-
 ### Notification
 
 {: .box-note}
-**Note:** This is a notification box.
+**Note:** Let me know if you need anything.
 
 ### Warning
 
 {: .box-warning}
-**Warning:** This is a warning box.
+**Warning:** Damn it don't touch it.
 
 ### Error
 
 {: .box-error}
-**Error:** This is an error box.
+**Error:** I told you so!
