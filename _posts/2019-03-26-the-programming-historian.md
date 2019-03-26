@@ -4,56 +4,16 @@ title: R Programming
 subtitle: This post introduces R as programming language for historians
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [historian, r, programming, science]
 comments: true
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+**What does a programming historian do?**
 
-**Here is some bold text**
+Basically everything a regular historian does but with digital tools and probably using some programming language.
+A version control system is also nice to have.
 
-## Here is a secondary heading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
+[Why](http://www.phdcomics.com/comics/archive/phd1029.gif)
 
 ## Boxes
 You can add notification, warning and error boxes like this:
