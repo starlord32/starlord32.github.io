@@ -13,7 +13,7 @@ comments: true
 Basically everything a regular historian does but with digital tools and probably using some programming language.
 A version control system is also nice to have.
 
-[Why](http://www.phdcomics.com/comics/archive/phd1029.gif)
+![Why](http://www.phdcomics.com/comics/archive/phd1029.gif)
 
 ## Boxes
 You can add notification, warning and error boxes like this:
