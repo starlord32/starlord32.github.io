@@ -10,6 +10,6 @@ comments: true
 
 **Here are my results**
 
-Only the first courses of each topic were accassible without a PRO account.
+Only the first courses of each topic were accessible without a PRO account.
 
-![Git]("/img/git.png")
+![Git](/img/git.png)
