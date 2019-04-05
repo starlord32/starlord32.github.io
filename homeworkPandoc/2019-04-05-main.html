@@ -1,0 +1,262 @@
+<h1 id="section">19.</h1>
+<h1 id="modeling-a-study-in-words-and-meanings">Modeling: A Study in Words and Meanings</h1>
+<h1 id="willard-mccarty">Willard McCarty</h1>
+<blockquote>
+<blockquote>
+<p>Out on site, you were never parted from your plans. They were your Bible. They got dog-eared, yellowed, smeared with mud, peppered with little holes from where you had unrolled them on the ground. But although so sacred, the plans were only the start. Once you got out there on the site everything was different. No matter how carefully done, the plans could not foresee the <em>variables</em>. It was always interesting, this moment when you saw for the first time the actual site rather than the idealised drawings of it.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Kate Grenville, <em>The Idea of Perfection</em><span class="citation" data-cites="grenville_idea_1999"><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></span></p>
+</blockquote>
+</blockquote>
+<h1 id="introduction">Introduction</h1>
+<p>The question of modeling arises naturally for humanities computing from the prior question of what its practitioners across the disciplines have in common. What are they all <em>doing</em> with their computers that we might find in their diverse activities indications of a coherent or cohesible practice? How do we make the best, most productive sense of what we observe? There are, of course, many answers: practice varies from person to person, from project to project, and ways of construing it perhaps vary even more. In this chapter I argue for modeling as a model <em>of</em> such a practice. I have three confluent goals: to identify humanities computing with an intellectual ground shared by the older disciplines, so that we may say how and to what extent our field is of as well as <em>in</em> the humanities, how it draws from and adds to them; at the same time to reflect experience with computers “in the wild”; and to aim at the most challenging problems, and so the most intellectually rewarding future now imaginable.</p>
+<p>My primary concern here is, as Confucius almost said, that we use <em>the correct word</em> for the activity we share lest our practice go awry for want of understanding (<em>Analects 13.3</em>). Several words are on offer. By what might be called a moral philology I examine them, arguing for the most popular of these, “modeling.” The nominal form, “model”, is of course very useful and even more popular, but for reasons I will adduce, its primary virtue is that properly defined it defaults to the present participle, its semantic lemma. Before getting to the philology I discuss modeling in the light of the available literature and then consider the strong and learned complaints about the term.</p>
+<h1 id="background">Background</h1>
+<p>Let me begin with provisional definitions<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. By “modeling” I mean <em>the heuristic process of constructing and manipulating models</em>, a “model” I take to be either <em>a representation of something for purposes of study</em>, or <em>a design for realizing something new</em>. These two senses follow Clifford Geertz’s analytic distinction between a denotative “model <em>of</em>” such as a grammar describing the features of a language, and an exemplary “model <em>for</em>” such as an architectural plan.<span class="citation" data-cites="geertz_interpretation_1973"><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. In both cases, as the literature consistently emphasizes, a model is by nature a simplified and therefore fictional or idealized representation, often taking quite a rough-and-ready form: hence the term “tinker toy” model from physics, accurately suggesting play, relative crudity, and heuristic purpose.<span class="citation" data-cites="cartwright_how_1983"><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></span> By nature modeling defines a ternary relationship in which it mediates epistemologically, between modeler and modeled, researcher and data or theory and the world.<span class="citation" data-cites="morgan_models_1999"><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></span> Since modeling is fundamentally relational, the same object may in different contexts play either role: thus, e.g., the grammar may function prescriptively, as a model <em>for</em> correct usage, the architectural plan descriptively, as a model <em>of</em> an existing style. The distinction also reaches its vanishing point in the convergent purposes of modeling: the model <em>of</em> exists to tell us that we do not know, the model <em>for</em> to give us what we do not yet have. Models <em>realize</em>.</p>
+<p>Perhaps the first question to ask is what such a process has to do with computing, since as the examples suggest neither of the two senses of “model” assumes it unless the definition is further qualified. In history, for example, Gordon Leff has argued that models have always been <em>implicit</em> in scholarly practice.<span class="citation" data-cites="leff_models_1972"><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></span> Leff cites, e.g., the historic-graphical notion of “epoch”, but any well-articulated idea would qualify as a model of <em>its</em> subject. Nevertheless, Leff notes that as M. I. Finley said in <em>Ancient History: Evidence and Models</em>, “model-construction is rare among all but economic historians”; Finley recommends Max Weber’s parallel concept of “ideal types”, which “expresses clearly the nature and function of models in historical inquiry.”<span class="citation" data-cites="finley_ancient_1986"><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></span> Explicit model-construction is still rare in mainstream humanities scholarship. Even for non-computational research in the social sciences, it is more common, as Finley’s demarcation suggests. For example, political schemes by nature model <em>for</em> a better or at least different world, even if like Marx’s historiography they begin as models of it; delineating them as models is the scholar’s obvious work.<span class="citation" data-cites="mironesco_role_2002"><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></span> Nevertheless, outside computationally affected scholarly practice Marvin Minsky’s simple, straightforward definition remains alien in style and in thought: “To an observer B, an object A* is a model <em>of</em> an object A to the extent that B can use A* to answer questions that interest him about A.”<span class="citation" data-cites="minsky_matter_1995"><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></span></p>
+<p>A strong temptation for us here is to dismiss the residual alienness of Minsky’s formulation and to accept, as we have accepted computing, the reified, explicit “model” of Minsky’s definition as what we <em>really</em> have been doing all along. This would, however, be a serious error. As with the relationship of hypertext to earlier ways of referring,<span class="citation" data-cites="mccarty_network_2002"><a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></span> the new form of expression, with its vocabulary and tools, means an altered way of thinking. A historical imagination is required to see what this means.</p>
+<p>Two effects of computing make the distinction between “idea” or other sort of mental construct on the one hand, and on the other “model” in the sense we require: first, the demand for computational tractability, i.e., for complete explicitness and absolute consistency; second, the manipulability that a computational representation provides.</p>
+<p>The first effects a sea-change by forcing us to confront the radical difference between what we know and what we can specify computationally, leading to the epistemological question of <em>how we know what we know</em>. On the one hand, as Michael Polanyi observed, “we can know more than we can tell.”<span class="citation" data-cites="polanyi_tacit_1966"><a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></span> Computational form, which accepts only that which can be told explicitly and precisely, is thus radically inadequate for representing the full range of knowledge – hence useful for isolating the tacit or inchoate kinds. On the other hand, we need to trust what we somehow know, at least provisionally, in order not to lose all that goes without saying or cannot be said in computational form.</p>
+<p>Take, for example, knowledge one might have of a particular thematic concentration in a deeply familiar work of literature. In modeling one begins by privileging this knowledge, however wrong it might later turn out to be, then building a computational representation of it, e.g., by specifying a structured vocabulary of word-forms in a text-analysis tool. In the initial stages of use, this model would be almost certain to reveal trivial errors of omission and commission. Gradually, however, through perfective iteration trivial error is replaced by meaningful surprise. There are in general two ways in which a model may violate expectations and so surprise us: either by a success we cannot explain, e.g., finding an occurrence where it should not be; or by a likewise inexplicable failure, e.g., not finding one where it is otherwise clearly present. In both cases modeling problematizes. As a tool of research, then, modeling succeeds intellectually when it results in failure, either directly within the model itself or indirectly through ideas it shows to be inadequate. This failure, in the sense of expectations violated, is, as we will see, fundamental to modeling.</p>
+<p>The second quality of “model” that distinguishes it from “idea” is manipulability, i.e., the capability of being handled, managed, worked, or treated by manual and, by extension, any mechanical means (OED: la.). Change is common to both models and ideas, but at greater or lesser metaphorical distance, “model” denotes a concrete, articulated plan inviting the etymological sense of action-by-hand (L. <em>manus</em>) in response. Manipulation in turn requires something that can be handled (physical objects, diagrams, or symbols of a formal language) – and a time-frame sufficiently brief that the emphasis falls on the process rather than its product. In other words, the modeling system must be interactive. Manipulable objects from the physical to the metaphorical have characterized mathematics, engineering, the physical sciences, and the arts ab wo, but with exceptions the necessary time-frame, allowing for interactivity, has been possible only with computing. With its advent, Minsky has noted, models could be “conceived, tested, and discarded in days or weeks instead of years.”<span class="citation" data-cites="minsky_conscious_1991"><a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></span> Computing met research easily in fields where modeling was already an explicit method because, Brian Cantwell Smith has pointed out, models are fundamental to computing: to do anything useful at all a computer must have a model <em>of</em> something, real or imaginary, in software. But in the context of computing, models per se are not the point. What distinguishes computers from other kinds of machines, Smith notes, is that “they run by manipulating representations, and representations are always formulated in terms of models.”<span class="citation" data-cites="smith_limits_1995-1 fetzer_role_1999"><a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a></span></p>
+<p>In other words, computational models, however finely perfected, are better understood as <em>temporary</em> states in a process of coming to know rather than fixed structures of knowledge. It is of course possible to argue ideologically, as some still do, that we are converging on and will achieve such structures,<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a> but in any case these structures would not then be models and would no longer have reason to exist in software. (Note that the history of computing is the story of ever more complex and extensive software, not less, despite the fact that implementations in hardware are faster and can be cheaper.) For the moment and the foreseeable future, then, <em>computers are essentially modeling machines, not knowledge jukeboxes</em>. To think of them as the latter is profoundly to misunderstand human knowledge – and so to constrict it to the narrow scope of the achievably mechanical.</p>
+<p>In analytical terms, as I have suggested, modeling has two phases: first, construction; second, manipulation. Examples come readily to mind from ordinary technical practice, e.g., building a relational database, then querying the data thus shaped to explore emergent patterns. As experience with databases shows, the two phases often blur into each other especially in the early stages when use uncovers faults or suggests improvements that direct redesign. A model 0/and a model <em>for</em> may be distinct types – because in our terms they are fixed objects. But modeling <em>of</em> something readily turns into modeling <em>for</em> better or more detailed knowledge of it; similarly, the knowledge gained from realizing a model <em>for</em> something feeds or can feed into an improved version. This characteristic blurring of design into use and use into (re)design is what denies modeling <em>of</em> any sense of closure. Modeling <em>for</em>, Utopian by definition, is denied it in any case.</p>
+<h1 id="learned-complaints">Learned Complaints</h1>
+<p>So far so good – but at the cost of averting our gaze from the problems with the word “model.” Indeed, the extensive and growing literature on the topic may seem adrift in a hopeless muddle. “I know of no model of a model”, physicist H. J. Groenewold declared many years ago.<span class="citation" data-cites="groenewold_model_1960"><a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a></span> The philosopher Peter Achinstein has warned us away even from attempting a systematic theory.<span class="citation" data-cites="achinstein_concepts_1968"><a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a></span> The word itself is indeed astonishingly polysemous – or promiscuous, as Nelson Goodman puts it. “Model”, he complains, can be used to denote “almost anything from a naked blonde to a quadratic equation.”<span class="citation" data-cites="goodman_languages_1976"><a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></span> Nevertheless, the word is often used as if its semantic complexity either did not exist or could be safely ignored. The muddle of partly overlapping, partly contradictory senses is proof enough that we ignore it at our peril. Nor can we simply avoid the problem by dismissing “model” altogether, as Goodman and others recommend, without (as I will argue) hobbling our ability to understand <em>inter alia</em> those aspects of computing most important to research – one might even say, as I do, its essence. Despite several other, supposedly less confusing terms on offer, the word remains stubbornly popular in the literature of the social and physical sciences, the history and philosophy of science, cognitive science, artificial intelligence, and related areas.</p>
+<p>Theoretical physicist John Ziman and philosopher Stephen Toulmin, for example, recommend “map” on the basis of its conceptual clarity and fitness for describing the relationship between theoretical knowledge and reality.<span class="citation" data-cites="ziman_real_2000 toulmin_philosophy_1953"><a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></span> Goodman would have us collapse modeling into diagramming, which he thinks less troublesome.<span class="citation" data-cites="goodman_languages_1976"><a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></span> But preference needs to be based on more than such criteria; “map”, for example, serves experiment much less well than theory, as I will show. We require a close and careful look at the semantic fields of all major alternatives, including “map”, for their disjunctions and overlaps. We need to scrutinize each of these, asking what does it denote and <em>connote</em> that the others do not, and vice versa? What do all have in common? What are their individual tendencies of mind, and which of these best suits computing as we are learning to conceive it?</p>
+<h1 id="philological-analysis-of-related-terms">Philological Analysis of Related Terms</h1>
+<p>So far I have used the term “model” as the default, partly for purposes of convenience, partly because, as I argue, it is right for the job. To answer the learned criticisms and further clarify our topic, however, I propose to question it by comparison against the major alternatives: “analogy”, “representation”, “diagram”, “map”, “simulation”, and “experiment.” As we have seen, the two decisive criteria are that the thing named by the chosen term be computationally tractable and manipulable. Tractability in turn requires complete explicitness and absolute consistency; manipulability resolves into mechanical action and interactivity. Hence the term must denote a continual process of coming to know, not an achievement but an approximation. As I have argued, it is from the difference between the approximation and the reality approximated – which ultimately for the humanities is our humanly known apprehension of that reality – that we learn.</p>
+<p>For each of the alternative terms I ask whether and to what degree the word normally denotes a dynamic process and whether it refers to a concrete, i.e. manipulable, form – the requirements of anything whose function is fulfilled through being changed. Corresponding to the two senses of “model” I identified earlier, the denotative model <em>of</em> and the exemplary model <em>for</em>, I also ask whether each word tends to the mimetic (imitation) or proleptic (anticipation). The distinction helps in determining whether the action denoted by a term may be said to be bounded, either by a fixed form, as is the case with “analogy”, or by an inherent tendency to reach a definitive or satisfactory conclusion, as in “representation.”</p>
+<p>Thus bringing “model” into focus against the semantic background of these other terms will show that the problem has not so much been too many meanings for “model” as use without regard to any of them, often as if the sense of it simply goes without saying. It doesn’t. But perhaps the most important lesson we learn from seeing the word in the context of its synonym set is not the range and variety of its meanings; rather, again, its strongly dynamic potential. Apart from the popularity of “model” taken at face-value, the word would have little to recommend it (and, as the complainers say, much against it) but for the <em>open-ended present-participial</em> strength of “modeling.”<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a> Indeed, the manifest confusion in the literature on the topic may be primarily due to a mistaken preference for the noun – as if getting a model right, and so promoting it to the status of theory, were the point. Modeling has an entirely different role to play. There are several better terms if what one wants is to name a stable conceptualization.</p>
+<h1 id="analogy">Analogy</h1>
+<p>“Analogy” (Gk., “equality of ratios, proportion”) is, like “model”, a highly polysemous term with a long and complex career<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>. John Stuart Mill complained that “no word … is used more loosely, or in a greater variety of senses, than Analogy.<span class="citation" data-cites="mill_system_1882"><a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a></span> Yet Dr Johnson’s pithy definition,”resemblance of things with regard to some circumstances or effects“, and Mill’s even pithier one,”resemblance of relations“, give us an idea of why it is so fruitful. From its original meaning in Greek mathematics, analogy specifies a structured relationship between pairs of related quantities, which for convenience may be represented in the form of an equation,”A/B = C/D“, read”as A is to B, so C is to D." Extended beyond mathematics to other modes of reasoning, analogy yields a powerful (but still poorly understood) means of inferring from the one relation to the other. Like most of the words in our domain, “analogy” is proleptic, a means of inference, based on conjecture, to something unknown or uncertain. Examples in the history of science are plentiful, e.g., Kepler’s discovery of the <em>vis matrix</em>, or cause of planetary motion, by reasoning that as the sun radiated light, so it must also radiate this motive power.<span class="citation" data-cites="gentner_analogy_2002"><a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a></span></p>
+<p>Here I wish only to argue two points. The first is that analogy is basic to the entire vocabulary. Although not every model is as strictly based on an analogy as Kepler’s, modeling is inherently analogical, with just the features that make the idea attractive for our purposes. Thus we require a structured correspondence between model and artifact, so that by playing with one we can infer facts about the other. (For example, by adjusting choice of words and weightings for a distribution-display across a textual corpus, one can investigate the effect of vocabulary on the interplay of meanings in that corpus.) The second point is that “analogy” is inherently static: it means either a type of relationship or an instance of one, never an object and not, literally or directly, a process. Action is implied in the ratio of quantities – thus Kepler’s “as A does B, so C does D” – but acting is not denoted by the analogy. The word has no commonly used verbal form (“analogize” and “analogizing” are rare if not strange). Although an analogy may be algebraically or geometrically expressed and may refer to concrete objects, it itself is abstract.</p>
+<p>Because analogy works so well as a way of describing how we often think, efforts to understand acquisition of new knowledge tend to engage with theories of analogy and to propose many mechanisms, e.g., in cognitive science, educational theory, and artificial intelligence.<span class="citation" data-cites="hoffman_monster_1995"><a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a></span> Because modeling is analogical, this work is potentially relevant to questions raised in computing the artifacts of the humanities. We need to pay attention here.</p>
+<h1 id="representation">Representation</h1>
+<p>“Representation” in Nelson Goodman’s terms is defined by a symbolic denotative correspondence, not likeness or imitation<span class="citation" data-cites="goodman_languages_1976"><a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a></span><a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>. In a less philosophically precise sense, however, we may say that “representation” displays strong mimetic tendencies, e.g., in the definition given by the OED: “An image, likeness, or reproduction in some manner of a thing …. A material image or figure; a reproduction in some material or tangible form; in later use esp. a drawing or painting (of a person or thing).” The history of aesthetics from earliest times, in fits and starts of fashion, demonstrates that the copy-theory of representation, though its falsity names its achievement in a <em>trompe I’oeil</em>, remains a habit of mind. If in aesthetics, why not in computer science?</p>
+<p>A well-attested present participle and a full complement of verbal forms establishes the action of representing, but semantically this action is bounded by its relationship to the represented object, whether this be symbolic or imitative.</p>
+<p>As with “analogy”, the semantic fields of “model” and “representation” clearly overlap, but the situation is more complex because of the mimetic and proleptic kinds of “model.” Hence (Platonism aside) we may say that modeling <em>of</em> is representational but not modeling <em>for</em>. In fact a model <em>of</em> is a manipulable variety of representation – which any representation in software would of course be. The crucial difference between model 0/and representation is the quality of the action implied. Unlike representing, modeling <em>of</em> is denied closure, as I noted earlier. It has no satisfactory trompe I’oeil or symbolizing conclusion. If the researcher calls a halt, then the last state of the system, as it were, is better called a “representation.”</p>
+<p>In the context of computing, the meaning of “representation” is dominated by the subfield of artificial intelligence known as “knowledge representation” (KR). Given the scope of this essay I can do little more than make a few observations, chiefly about the assumptions built into the name and apparently into tendencies in some KR work. In brief, my argument concerning KR is that it needs to be understood as a particularly rigorous control on model-building suitable to that which can be stated in prepositional form.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a></p>
+<p>To the connotations of “representation” I have already reviewed, KR adds the demarca-tional term “knowledge.” The point I wish to draw from current epistemology is a simple one, for which I quote Michael Williams – at length, because the issues are consequential for us:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>“Knowledge” is an honorific title we confer on our paradigm cognitive achievements …. More generally, “know” is a “success-term”, like “win” or “pass” (a test). Knowledge is not just a factual state or condition but a particular normative status. Such statuses are related to appropriate factual states: winning depends on crossing the line before any other competitor. But they also depend on meeting certain norms or standards which define, not what you do do, but what you must or ought to do. To characterize someone’s claim as expressing or not expressing knowledge is to pass judgement on it. Epistemic judgements are thus a particular kind of value-judgement ….</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>This normative dimension distinguishes philosophical theories of knowledge from straightforwardly factual inquiries and explains why demarcational (and related methodological) issues are so significant. Because epistemological distinctions are invidious, ideas about epistemological demarcation always involve putting some claims or methods above others: mathematics above empirical science, empirical science above metaphysics or religion, logic above rhetoric, and so on. Demarcational projects use epistemological criteria to sort areas of discourse into factual and non-factual, truth-seeking and merely expressive, and, at the extreme, meaningful and meaningless. Such projects amount to proposals for a map of culture: a guide to what forms of discourse are “serious” and what are not. Disputes about demarcation – induding disputes about whether demarcational projects should be countenanced at all – are disputes about the shape of our culture and so, in the end, of our lives.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><span class="citation" data-cites="williams_problems_2001"><a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a></span></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Projects such as Cyc, based on what Northrop Frye characterized as the discredited <em>Wissenscbaft-theory</em> of knowledge – that its accumulation in vast quantities will one day, somehow, result in understanding<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a> – clearly assume if not perfect closure, then a threshold beyond which lack of perfection ceases to matter. But to whom, and for what purposes?<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a> Apart from such questions, and the serious doubts within computer science on the wisdom of building massive knowledge-bases for expert systems<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a> – there are, again, the very serious demarcational issues. When, for example, one of the leading theorists of KR writes in passing that, “Perhaps there are some kinds of knowledge that cannot be expressed in logic”<span class="citation" data-cites="sowa_knowledge_2000"><a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a></span> (2000), our intellectual claustrophobia tells an important tale. Not, of course, the only one. If the point of modeling is to fail well, then KR has a vital quality-control function to serve.</p>
+<h1 id="bibliography" class="unnumbered">Bibliography</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-achinstein_concepts_1968">
+<p>Achinstein, Peter. <em>Concepts of Science: A Philosophical Analysis</em>. Johns Hopkins University Press, 1968.</p>
+</div>
+<div id="ref-bailer-jones_tracing_1999">
+<p>Bailer-Jones, Daniela M. “Tracing the Development of Models in the Philosophy of Science.” edited by Lorenco Magnani, Nancy J. Nersessian, and Paul Thagard, 23–40. Kluwer Academic/Plenum, 1999.</p>
+</div>
+<div id="ref-bailer-jones_modeling_2002">
+<p>Bailer-Jones, Daniela M., and Coryn A. L. Bailer-Jones. “Modeling Data: Analogies in Neural Networks, Simulated Annealing and Genetic Algorithms.” edited by Lorenco Magnani and Nancy J. Nersessian, 147–65. Kluwer Academic/Plenum, 2002.</p>
+</div>
+<div id="ref-barr_representation_1981">
+<p>Barr, Avron, and Edward A. Feigenbaum. “Representation of Knowledge.” edited by Avron Barr and Edward A. Feigenbaum, Vol. 1. Morgan Kaufmann, 1981.</p>
+</div>
+<div id="ref-black_more_1993">
+<p>Black, Max. “More About Metaphor.” In <em>Metaphor and Thought</em>, edited by Andrew Ortony, 19–41. Cambridge University Press, 1993.</p>
+</div>
+<div id="ref-brooks_intelligence_1991">
+<p>Brooks, Rodney A. “Intelligence Without Representation.” <em>Artificial Intelligence</em> 47, nos. 1-3 (1991): 139–59.</p>
+</div>
+<div id="ref-cartwright_how_1983">
+<p>Cartwright, Nancy. <em>How the Laws of Physics Lie</em>. 1 edition. Oxford : New York: Oxford University Press, 1983.</p>
+</div>
+<div id="ref-clarke_models_2014">
+<p>Clarke, David L. <em>Models in Archaeology</em>. Routledge, 2014. <a href="https://doi.org/10.4324/9781315748474">https://doi.org/10.4324/9781315748474</a>.</p>
+</div>
+<div id="ref-davis_what_1993">
+<p>Davis, Randall, Howard Shrobe, and Peter Szolovits. “What Is Knowledge Representation?” <em>AI Magazine (Spring)</em> 14, no. 1 (1993): 17–33.</p>
+</div>
+<div id="ref-dening_performances_1996">
+<p>Dening, Greg. <em>Performances</em>. University of Chicago Press, 1996.</p>
+</div>
+<div id="ref-dening_readings/writings_1998">
+<p>———. <em>Readings/Writings</em>. University of Melbourne Press, 1998.</p>
+</div>
+<div id="ref-dreyfus_microworlds_1985">
+<p>Dreyfus, Hubert L. “From MicroWorlds to Knowledge Representation: AI at an Impasse.” In <em>Readings in Knowledge Representation</em>, edited by Ronald J. Brachman and Hector J. Levesque, 71–94. Morgan Kaufmann, 1985.</p>
+</div>
+<div id="ref-elgin_goodman_1998">
+<p>Elgin, Catherine Z. <em>Goodman, Nelson</em>. Routledge Encyclopedia of Philosophy. Routledge, 1998.</p>
+</div>
+<div id="ref-fetzer_role_1999">
+<p>Fetzer, James H. “The Role of Models in Computer Science.” <em>The Monist</em> 82, no. 1 (1999): 20–36.</p>
+</div>
+<div id="ref-finley_ancient_1986">
+<p>Finley, M. I. <em>Ancient History: Evidence and Models</em>. New York, N.Y., U.S.A: Viking Pr, 1986.</p>
+</div>
+<div id="ref-fodor_west_1995">
+<p>Fodor, Jerry. “West Coast Fuzzy. Review of Paul M. Churchland, the Engine of Reason, the Seat of the Soul.” <em>Times Literary Supplement (August 25)</em>, 1995.</p>
+</div>
+<div id="ref-franck_explanatory_2002">
+<p>Franck, Robert, ed. <em>The Explanatory Power of Models</em>. Vol. 1. Kluwer Academic, 2002.</p>
+</div>
+<div id="ref-frye_literary_1991">
+<p>Frye, Northrop. “Literary and Mechanical Models.” In <em>Research in Humanities Computing 1. Papers from the 1989 ACHALLC Conference</em>, edited by S. Hockey, N. Ide, and Ian Lancashire, 1:1–12. Clarendon Press, 1991.</p>
+</div>
+<div id="ref-geertz_interpretation_1973">
+<p>Geertz, Clifford. <em>The Interpretation of Cultures: Selected Essays.</em> Basic Books, 1973.</p>
+</div>
+<div id="ref-gentner_analogy_2002">
+<p>Gentner, Dedre. “Analogy in Scientific Discovery: The Case of Johannes Kepler.” In <em>Model-Based Reasoning: Science, Technology, Values</em>, edited by Lorenzo Magnani and Nancy J Nersessian, 21–39. Kluwer Academic / Plenum Publishers, 2002.</p>
+</div>
+<div id="ref-gibbs_poetics_1994">
+<p>Gibbs, Raymond W., Jr. <em>The Poetics of Mind: Figurative Thought, Language, and Understanding</em>. Cambridge University Press, 1994.</p>
+</div>
+<div id="ref-goodman_languages_1976">
+<p>Goodman, Nelson. <em>Languages of Art</em>. 2 edition. Indianapolis, Ind.: Hackett Publishing Company, Inc., 1976.</p>
+</div>
+<div id="ref-grenville_idea_1999">
+<p>Grenville, Kate. <em>The Idea of Perfection</em>. Sydney: text publishing, 1999.</p>
+</div>
+<div id="ref-groenewold_model_1960">
+<p>Groenewold, H. J. “The Model in Physics.” <em>The Concept and the Role of the Model in Mathematics and the Natural Sciences.</em> 12, nos. 2-3 (1960): 98–103.</p>
+</div>
+<div id="ref-hacking_stability_1988">
+<p>Hacking, Ian. “On the Stability of the Laboratory Sciences.” <em>Journal of Philosophy</em> 85, no. 10 (1988): 507–14.</p>
+</div>
+<div id="ref-hoffman_monster_1995">
+<p>Hoffman, Robert R. “Monster Analogies.” <em>AI Magazine</em> 16 (1995): 11–35.</p>
+</div>
+<div id="ref-holyoak_analogical_1997">
+<p>Holyoak, Keith J., and Paul Thagard. “The Analogical Mind.” <em>American Psychologist</em> 52, no. 1 (1997): 35–44.</p>
+</div>
+<div id="ref-hopkins_depiction_2000">
+<p>Hopkins, Robert D. <em>Depiction</em>. Routledge Encyclopedia of Philosophy. Routledge, 2000.</p>
+</div>
+<div id="ref-johnson_metaphor-based_2002">
+<p>Johnson, Mark. “Metaphor-Based Values in Scientific Models.” In <em>Magnani and Nersessian</em>, edited by Lorenco Magnani and Nancy J. Nersessian, 1–19. Kluwer Academic/Plenum, 2002.</p>
+</div>
+<div id="ref-leatherdale_role_1974">
+<p>Leatherdale, W. H. <em>The Role of Analogy, Model and Metaphor in Science</em>. North Holland Publishing, 1974.</p>
+</div>
+<div id="ref-leff_models_1972">
+<p>Leff, Gordon. “Models Inherent in History.” In <em>Rules of the Game: CrossDisciplinary Essays on Models in Scholarly Thought</em>, edited by Teodor Shanin, 148–74. Tavistock, 1972.</p>
+</div>
+<div id="ref-lenat_2001_1998">
+<p>Lenat, Douglas B. “From 2001 to 2001: Common Sense and the Mind of HAL.” In <em>HAL’s Legacy: 2001’s Computer as Dream and Reality</em>, edited by David G. Stork. MIT Press, 1998.</p>
+</div>
+<div id="ref-mccarty_network_2002">
+<p>McCarty, Willard. “A Network with a Thousand Entrances: Commentary in an Electronic Age?” <em>The Classical Commentary</em>, 2002, 359–402. <a href="https://doi.org/10.1163/9789047400943_016">https://doi.org/10.1163/9789047400943_016</a>.</p>
+</div>
+<div id="ref-mill_system_1882">
+<p>Mill, John Stuart. <em>A System of Logic</em>. CreateSpace Independent Publishing Platform, 1882.</p>
+</div>
+<div id="ref-minsky_matter_1995">
+<p>Minsky, Marvin. “Matter, Mind and Models.” In <em>Semantic Information Processing</em>, edited by Marvin Minsky, Vol. 1. Cambridge, MA: MIT Press, 1995.</p>
+</div>
+<div id="ref-minsky_conscious_1991">
+<p>Minsky, Marvin L. “Conscious Machines.” In <em>Machinery of Consciousness</em>, 1991.</p>
+</div>
+<div id="ref-mironesco_role_2002">
+<p>Mironesco, Christine. “The Role of Models in Comparative Politics.” In <em>The Explanatory Power of Models: Bridging the Gap Between Empirical and Theoretical Research in the Social Sciences</em>, edited by Robert Franck, 181–95. Methodos Series. Dordrecht: Springer Netherlands, 2002. <a href="https://doi.org/10.1007/978-1-4020-4676-6_10">https://doi.org/10.1007/978-1-4020-4676-6_10</a>.</p>
+</div>
+<div id="ref-mitchell_analogy-making_1993">
+<p>Mitchell, Melanie. <em>Analogy-Making as Perception</em>. MIT Press, 1993.</p>
+</div>
+<div id="ref-morgan_models_1999">
+<p>Morgan, Mary S., and Margaret Morrison. <em>Models as Mediators: Perspectives on Natural and Social Science</em>. Cambridge University Press, 1999.</p>
+</div>
+<div id="ref-polanyi_tacit_1966">
+<p>Polanyi, Michael. <em>The Tacit Dimension.</em> Doubleday, 1966.</p>
+</div>
+<div id="ref-shanin_models_1972">
+<p>Shanin, Teodor. “Models in Thought.” In <em>The Rules of the Game: Cross-Disciplinary Essays on Models in Scholarly Thought</em>, edited by Teodor Shanin, 1–22. Tavistock, 1972.</p>
+</div>
+<div id="ref-shelley_analogy_2002">
+<p>Shelley, C. “Analogy Counterarguments and the Acceptability of Analogical Hypotheses.” <em>The British Journal for the Philosophy of Science</em> 53, no. 4 (2002): 477–96.</p>
+</div>
+<div id="ref-smith_limits_1995-1">
+<p>Smith, Brian Cantwell. “Limits of Correctness in Computers.” In <em>Computers, Ethics and Social Values</em>, edited by Deborah G. Johnson and Helen F. Nissenbaum, 456–69. Prentice Hall, 1995.</p>
+</div>
+<div id="ref-sowa_knowledge_2000">
+<p>Sowa, John. <em>Knowledge Representation: Logical, Philosophical, and Computational Foundations</em>. Pacific Grove: Thomson Learning, 2000.</p>
+</div>
+<div id="ref-toulmin_philosophy_1953">
+<p>Toulmin, Stephen. <em>The Philosophy of Science 1953</em>. Isha Books, 1953.</p>
+</div>
+<div id="ref-turner_literary_1996">
+<p>Turner, Mark. <em>Literary Mind: The Origins of Thought and Language</em>. Oxford University Press, 1996.</p>
+</div>
+<div id="ref-turner_raymond_1995">
+<p>———. “Raymond W. Gibbs, Jr., the Poetics of Mind: Figurative Thought, Language, and Understanding.” <em>Pragmatics and Cognition</em> 3, no. 1 (1995): 181–87.</p>
+</div>
+<div id="ref-williams_problems_2001">
+<p>Williams, Michael. <em>Problems of Knowledge: A Critical Introduction to Epistemology</em>. Oxford University Press, 2001.</p>
+</div>
+<div id="ref-winder_textpert_1997">
+<p>Winder, William. “Textpert Systems.” <em>Computing in the Humanities Working Papers</em>, no. B.35 (1997).</p>
+</div>
+<div id="ref-winograd_thinking_1991">
+<p>Winograd, Terry. “Thinking Machines: Can There Be? Are We?” In <em>The Boundaries of Humanity: Humans, Animals, Machines</em>, edited by James J. Sheehan and Morton Sosna. University of California Press, 1991.</p>
+</div>
+<div id="ref-winograd_understanding_1986">
+<p>Winograd, Terry, and Fernando Flores. <em>Understanding Computers and Cognition: A New Foundation for Design</em>. AddisonWesley, 1986.</p>
+</div>
+<div id="ref-ziman_real_2000">
+<p>Ziman, J. M. <em>Real Science: What It Is, and What It Means</em>. Cambridge University Press, 2000.</p>
+</div>
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Grenville, <em>The Idea of Perfection</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn2" role="doc-endnote"><p>My definitions reflect the great majority of the literature explicitly on modeling in the history and philosophy of the natural sciences, especially of physics. The literature tends to be concerned with the role of modeling more in formal scientific theory than in experiment. The close relationship between modeling and experimenting means that the rise of a robust philosophy of experiment since the 1980s is directly relevant to our topic; see <span class="citation" data-cites="hacking_stability_1988">Hacking, “On the Stability of the Laboratory Sciences.”</span> (1988). Quite helpful in rethinking the basic issues for the humanities are the writings from the disciplines other than physics, e.g., <span class="citation" data-cites="clarke_models_2014">Clarke, <em>Models in Archaeology</em>.</span> (2014) on archaeology; on the social sciences, the essays by de Callatay, Mironesco, Burch, and Gardin in <span class="citation" data-cites="franck_explanatory_2002">Franck, <em>The Explanatory Power of Models</em>.</span> (2002). For interdisciplinary studies see <span class="citation" data-cites="shanin_models_1972">Shanin, “Models in Thought.”</span> (1972) and <span class="citation" data-cites="morgan_models_1999">Morgan and Morrison, <em>Models as Mediators</em>.</span> (1999), esp. “Models as Mediating Instruments” (pp. 10–37).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Geertz, <em>The Interpretation of Cultures</em>, 93.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Cf. Goodman’s distinction between “denotative” and “exemplary” models, respectively <span class="citation" data-cites="goodman_languages_1976">Goodman, <em>Languages of Art</em>, 172–3.</span> (1976); H. J. Groenewold’s “more or less poor substitute” and “more or less exemplary ideal” <span class="citation" data-cites="groenewold_model_1960">Groenewold, “The Model in Physics,” 98.</span> (1960). Similar distinctions are quite common in the literature.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Cartwright, <em>How the Laws of Physics Lie</em>, 93.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn6" role="doc-endnote"><p>Morgan and Morrison, <em>Models as Mediators</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn7" role="doc-endnote"><p>Leff, “Models Inherent in History.”<a href="#fnref7" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn8" role="doc-endnote"><p>Finley, <em>Ancient History</em>, 60f.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn9" role="doc-endnote"><p>Mironesco, “The Role of Models in Comparative Politics.”<a href="#fnref9" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn10" role="doc-endnote"><p>Minsky, “Matter, Mind and Models.”<a href="#fnref10" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn11" role="doc-endnote"><p>McCarty, “A NETWORK WITH A THOUSAND ENTRANCES.”<a href="#fnref11" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn12" role="doc-endnote"><p>Polanyi, <em>The Tacit Dimension.</em>, 4–5.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn13" role="doc-endnote"><p>Minsky, “Conscious Machines.”<a href="#fnref13" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn14" role="doc-endnote"><p>Smith, “Limits of Correctness in Computers,” 460; Fetzer, “The Role of Models in Computer Science,” 23.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn15" role="doc-endnote"><p>This is usually done in “the rhetoric of technohype … the idiom of grant proposals and of interviews in the Tuesday New York Science Times: The breakthrough is at hand; this time we’ve got it right; theory and practice will be forever altered; we have really made fantastic progress, and there is now general agreement on the basics; further funding is required” <span class="citation" data-cites="fodor_west_1995">Fodor, “West Coast Fuzzy. Review of Paul M. Churchland, the Engine of Reason, the Seat of the Soul.”</span> (1995). More serious criticism is leveled by <span class="citation" data-cites="winograd_thinking_1991">Winograd, “Thinking Machines,” 207–8.</span> (1991); see below.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn16" role="doc-endnote"><p>Groenewold, “The Model in Physics,” 98.<a href="#fnref16" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn17" role="doc-endnote"><p>Achinstein, <em>Concepts of Science</em>, 203.<a href="#fnref17" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn18" role="doc-endnote"><p>Goodman, <em>Languages of Art</em>, 171.<a href="#fnref18" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn19" role="doc-endnote"><p>Ziman, <em>Real Science</em>, 126–38; Toulmin, <em>The Philosophy of Science 1953</em>, 94–109.<a href="#fnref19" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn20" role="doc-endnote"><p>Goodman, <em>Languages of Art</em>, 171–3.<a href="#fnref20" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn21" role="doc-endnote"><p>I have in mind the present-participial imagination described by Greg Dening, with which we may “return to the past the past’s own present, a present with all the possibilities still in it, with all the consequences of actions still unknown” <span class="citation" data-cites="dening_readings/writings_1998 dening_performances_1996">Dening, <em>Readings/Writings</em>, 48; Dening, <em>Performances</em>, 35–63.</span> (1996).<a href="#fnref21" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn22" role="doc-endnote"><p>For the concept in imaginative language and thought see <span class="citation" data-cites="gibbs_poetics_1994 turner_raymond_1995">Gibbs, <em>The Poetics of Mind</em>; Turner, “Raymond W. Gibbs, Jr., the Poetics of Mind.”</span> (1994; 1995), <span class="citation" data-cites="turner_literary_1996">Turner, <em>Literary Mind</em>.</span> (1996); in computer science, <span class="citation" data-cites="hoffman_monster_1995">Hoffman, “Monster Analogies.”</span> (1995) – whose summary of research is quite valuable; in cognitive science, including psychology, <span class="citation" data-cites="mitchell_analogy-making_1993">Mitchell, <em>Analogy-Making as Perception</em>.</span> (1993), <span class="citation" data-cites="holyoak_analogical_1997">Holyoak and Thagard, “The Analogical Mind.”</span> (1997); in the philosophy of science, <span class="citation" data-cites="achinstein_concepts_1968">Achinstein, <em>Concepts of Science</em>.</span> (1968), <span class="citation" data-cites="leatherdale_role_1974">Leatherdale, <em>The Role of Analogy, Model and Metaphor in Science</em>.</span> (1974), <span class="citation" data-cites="gentner_analogy_2002">Gentner, “Analogy in Scientific Discovery.”</span> (2002), <span class="citation" data-cites="shelley_analogy_2002">Shelley, “Analogy Counterarguments and the Acceptability of Analogical Hypotheses.”</span> (2002); in relation to modeling, <span class="citation" data-cites="bailer-jones_tracing_1999">Bailer-Jones, “Tracing the Development of Models in the Philosophy of Science.”</span> (1999), <span class="citation" data-cites="bailer-jones_modeling_2002">Bailer-Jones and Bailer-Jones, “Modeling Data.”</span> (2002). I do not deal here with metaphor in relation to modeling, for which see <span class="citation" data-cites="black_more_1993">Black, “More About Metaphor.”</span> (1993), <span class="citation" data-cites="johnson_metaphor-based_2002">Johnson, “Metaphor-Based Values in Scientific Models.”</span> (2002).<a href="#fnref22" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn23" role="doc-endnote"><p>Mill, <em>A System of Logic</em>.<a href="#fnref23" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn24" role="doc-endnote"><p>Gentner, “Analogy in Scientific Discovery.”<a href="#fnref24" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn25" role="doc-endnote"><p>Hoffman, “Monster Analogies.”<a href="#fnref25" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn26" role="doc-endnote"><p>Goodman, <em>Languages of Art</em>, 3–41.<a href="#fnref26" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn27" role="doc-endnote"><p>Goodman dismantles the copy-theory of representation, arguing that representation is not mimetic but symbolic: object X is always represented as Y, which means that Y is selective with respect to X and stands in symbolic relationship to it. See also <span class="citation" data-cites="elgin_goodman_1998">Elgin, <em>Goodman, Nelson</em>.</span> (1998), <span class="citation" data-cites="hopkins_depiction_2000">Hopkins, <em>Depiction</em>.</span> (2000).<a href="#fnref27" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn28" role="doc-endnote"><p>Possibly the best and least problematic view is afforded by Davis et al. , <span class="citation" data-cites="davis_what_1993">Davis, Shrobe, and Szolovits, “What Is Knowledge Representation?”</span> (1993); see also <span class="citation" data-cites="sowa_knowledge_2000">Sowa, <em>Knowledge Representation</em>.</span> (2000)); <span class="citation" data-cites="barr_representation_1981">Barr and Feigenbaum, “Representation of Knowledge.”</span> (1981). <span class="citation" data-cites="lenat_2001_1998">Lenat, “From 2001 to 2001.”</span> (1998) illustrates the problematic tendencies in this field; <span class="citation" data-cites="winograd_thinking_1991">Winograd, “Thinking Machines.”</span> (1991) and <span class="citation" data-cites="dreyfus_microworlds_1985">Dreyfus, “From MicroWorlds to Knowledge Representation.”</span> (1985) provide the antidote.<a href="#fnref28" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn29" role="doc-endnote"><p>Williams, <em>Problems of Knowledge</em>, 11–12.<a href="#fnref29" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn30" role="doc-endnote"><p><span class="citation" data-cites="frye_literary_1991">Frye, “Literary and Mechanical Models,” 4.</span> (1991), to which compare Winograd’s analysis of the “almost childish leap of faith” made, e.g., by Marvin Minsky in his “Society of Mind” thesis that “the modes of explanation that work for the details of [the artificial micro-worlds thus represented] will be adequate for understanding conflict, consciousness, genius, and freedom of will” <span class="citation" data-cites="winograd_thinking_1991">Winograd, “Thinking Machines,” 204–7.</span> (1991) – as the ambitious claim; see also <span class="citation" data-cites="winder_textpert_1997">Winder, “Textpert Systems.”</span> (1997).<a href="#fnref30" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn31" role="doc-endnote"><p>Note the boast that “Cyc knows that trees are usually outdoors, that once people die they stop buying things, and that glasses of liquid should be carried rightside-up” (Cycorp Company Overview, at http://www.cyc.com/overview.html, accessed September 22, 2003.<a href="#fnref31" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn32" role="doc-endnote"><p><span class="citation" data-cites="winograd_understanding_1986">Winograd and Flores, <em>Understanding Computers and Cognition</em>, 97–100, 131–3, 174–7.</span> (1986); <span class="citation" data-cites="dreyfus_microworlds_1985">Dreyfus, “From MicroWorlds to Knowledge Representation.”</span> (1985). See also Brooks <span class="citation" data-cites="brooks_intelligence_1991">Brooks, “Intelligence Without Representation.”</span> (1991).<a href="#fnref32" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn33" role="doc-endnote"><p>Sowa, <em>Knowledge Representation</em>, 12.<a href="#fnref33" class="footnote-back" role="doc-backlink">↩</a></p></li>
+</ol>
+</section>
