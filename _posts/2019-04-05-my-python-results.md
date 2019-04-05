@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Git Course on Codecademy
-subtitle: Screenshot of the resutls.
+title: Python 2 Course on Codecademy
+subtitle: Screenshot of the results.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
-tags: [historian, git, codecademy, science]
+tags: [historian, python, codecademy, science]
 comments: true
 ---
 
 **Here are my results**
 
-Only the first courses of each topic were accessible without a PRO account.
+All available courses for unit one and two were completed.
 
-![Git](/img/git.png)
+![Python](/img/python.png)
