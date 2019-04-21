@@ -32,7 +32,7 @@ Boydton,Virginia,-8726488.565,4397874.170,-8726488.565,4397874.170
 Williamsburg,Virginia,-8531492.282,4479778.161,-8531492.282,4479778.161
 ```
 
-## Map two Civil War east states including mapped activities
+## Map two Civil War east states including mapped cities
 
 ![US_east_states](/img/east_us_states.PNG)
 
