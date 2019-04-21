@@ -14,7 +14,8 @@ comments: true
 
 ![Virginia_Map](/img/virginia_mapped_with_cities.PNG)
 
-```Mapping coordinates
+```
+Mapping coordinates
 city,state,lon,lat,lon1,lat1
 Whashington,Virginia,-8575220.685,4706332.932,-8575220.685,4706332.932
 Alexandria,Virginia,-8580773.498,4693746.556,-8580773.498,4693746.556
@@ -35,7 +36,8 @@ Williamsburg,Virginia,-8531492.282,4479778.161,-8531492.282,4479778.161
 
 ![US_east_states](/img/east_us_states.PNG)
 
-```city,state,lon,lat,lon1,lat1
+```
+city,state,lon,lat,lon1,lat1
 New York,New York,-8234229.297,4970380.761,-8234229.297,4970380.761
 Philadelphia,Pennsylvania,-8368867.370,4858182.367,-8368867.370,4858182.367
 Miami,Florida,-8937629.376,2950191.930,-8937629.376,2950191.930
