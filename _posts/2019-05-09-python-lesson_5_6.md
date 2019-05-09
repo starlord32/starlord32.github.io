@@ -12,4 +12,4 @@ comments: true
 
 ## Cources 5 and 6
 
-[!Python 5 and 6](/img/python_5_6.PNG)
+![Python 5 and 6](/img/python_5_6.PNG)
