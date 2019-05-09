@@ -135,8 +135,6 @@ Solution: ```SOLUTION: (simply connect all placenames with a pipe, `|`) >```
 	Groß-Enzersdorf (Lower Austria),
 	Seekirchen am Wallersee (Salzburg), Sankt Andrä (Carinthia)
 
-	SOLUTION 1:
-		```\b([\w ]+) \(Lower Austria\)```
-		```Atom: \b([\w ]+[\wöäü]+) \(Lower Austria\)```
-	SOLUTION 2 (more precise):
-		```\b([\w ]+)(?=( \(Lower Austria\)))```
+SOLUTION 1: ```\b([\w ]+) \(Lower Austria\)```
+	        	```Atom: \b([\w ]+[\wöäü]+) \(Lower Austria\)```
+SOLUTION 2 (more precise): ```\b([\w ]+)(?=( \(Lower Austria\)))```

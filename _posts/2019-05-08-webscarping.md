@@ -13,7 +13,9 @@ comments: true
 The following wget commands allow to download content:
 
 ```wget link```
+
 ```wget -i file_with_links.txt```
+
 ```wget -i links.txt -P ./folderYouWantToSaveTo/ -nc```
 
 Practice Webscraping by downloading the following database collection:
