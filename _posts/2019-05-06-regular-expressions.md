@@ -13,7 +13,7 @@ comments: true
 	“eat”, “eats”, “ate”, “eaten”, “eating”, “eater”,
 	“eatery”
 
-***Solution: eat[at]?[sei]?[nr]?[yg]?|ate***
+Solution: ```eat[at]?[sei]?[nr]?[yg]?|ate```
 
 ## 2. Find all Qadhdhafis...
 	... the name of the country's head of state [is]
@@ -32,7 +32,7 @@ comments: true
 	Moammar Gadhafi, Mo'ammar Gadhafi, Moammar Ghadafi,
 	Moammar Kadhafi, Moammar Khadaffy, Moammar Khadafy
 
-***Solution: M[auo']+m+[ae]r? ([elAIE]+)?-? ?[GK][ah][zda]z?[dh]?af+?[iy]***
+Solution: ```M[auo']+m+[ae]r? ([elAIE]+)?-? ?[GK][ah][zda]z?[dh]?af+?[iy]```
 
 ## 3. Find all variations of Iṣbahān
 	(construct the shortest possible regular expression):
@@ -45,7 +45,7 @@ comments: true
 	isfahan, esfāhān‎, esfahān,
 	esfahan, hispahan,
 
-***Solution: [IEH]ṣ?\w+ā?\w[ā\w]n***
+```Solution: [IEH]ṣ?\w+ā?\w[ā\w]n```
 
 # PART II (more practice)
 
@@ -91,7 +91,9 @@ comments: true
 	Gänserndorf, Gerasdorf bei Wien, Ebreichsdorf, Bischofshofen,
 	Groß-Enzersdorf, Seekirchen am Wallersee, Sankt Andrä
 
-	***Solution: SOLUTION: (simply connect all placenames with a pipe, `|`) > Vienna|Graz|Linz|Salzburg|Innsbruck|Klagenfurt|Villach|Wels|Sankt Pölten|Dornbirn|Wiener Neustadt|Steyr|Feldkirch|Bregenz|Leonding|Klosterneuburg|Baden bei Wien|Wolfsberg|Leoben|Krems|Traun|Amstetten|Lustenau|Kapfenberg|Mödling|Hallein|Kufstein|Traiskirchen|Schwechat|Braunau am Inn|Stockerau|Saalfelden|Ansfelden|Tulln|Hohenems|Spittal an der Drau|Telfs|Ternitz|Perchtoldsdorf|Feldkirchen|Bludenz|Bad Ischl|Eisenstadt|Schwaz|Hall in Tirol|Gmunden|Wörgl|Wals-Siezenheim|Marchtrenk|Bruck an der Mur|Sankt Veit an der Glan|Korneuburg|Neunkirchen|Hard|Vöcklabruck|Lienz|Rankweil|Hollabrunn|Enns|Brunn am Gebirge|Ried im Innkreis|Bad Vöslau|Waidhofen|Knittelfeld|Trofaiach|Mistelbach|Zwettl|Völkermarkt|Götzis|Sankt Johann im Pongau|Gänserndorf|Gerasdorf bei Wien|Ebreichsdorf|Bischofshofen|Groß-Enzersdorf|Seekirchen am Wallersee|Sankt Andrä***
+Solution: ```SOLUTION: (simply connect all placenames with a pipe, `|`) >```
+
+	Vienna|Graz|Linz|Salzburg|Innsbruck|Klagenfurt|Villach|Wels|Sankt Pölten|Dornbirn|Wiener Neustadt|Steyr|Feldkirch|Bregenz|Leonding|Klosterneuburg|Baden bei Wien|Wolfsberg|Leoben|Krems|Traun|Amstetten|Lustenau|Kapfenberg|Mödling|Hallein|Kufstein|Traiskirchen|Schwechat|Braunau am Inn|Stockerau|Saalfelden|Ansfelden|Tulln|Hohenems|Spittal an der Drau|Telfs|Ternitz|Perchtoldsdorf|Feldkirchen|Bludenz|Bad Ischl|Eisenstadt|Schwaz|Hall in Tirol|Gmunden|Wörgl|Wals-Siezenheim|Marchtrenk|Bruck an der Mur|Sankt Veit an der Glan|Korneuburg|Neunkirchen|Hard|Vöcklabruck|Lienz|Rankweil|Hollabrunn|Enns|Brunn am Gebirge|Ried im Innkreis|Bad Vöslau|Waidhofen|Knittelfeld|Trofaiach|Mistelbach|Zwettl|Völkermarkt|Götzis|Sankt Johann im Pongau|Gänserndorf|Gerasdorf bei Wien|Ebreichsdorf|Bischofshofen|Groß-Enzersdorf|Seekirchen am Wallersee|Sankt Andrä
 
 ## 3. More Difficult: Construct regular expression that finds only cities from 1) Lower Austria; 2) Salzburg.
 
@@ -133,8 +135,8 @@ comments: true
 	Groß-Enzersdorf (Lower Austria),
 	Seekirchen am Wallersee (Salzburg), Sankt Andrä (Carinthia)
 
-	***SOLUTION 1:
-		\b([\w ]+) \(Lower Austria\)
-		Atom: \b([\w ]+[\wöäü]+) \(Lower Austria\)***
-	***SOLUTION 2 (more precise):
-		\b([\w ]+)(?=( \(Lower Austria\)))***
+	SOLUTION 1:
+		```\b([\w ]+) \(Lower Austria\)```
+		```Atom: \b([\w ]+[\wöäü]+) \(Lower Austria\)```
+	SOLUTION 2 (more precise):
+		```\b([\w ]+)(?=( \(Lower Austria\)))```
