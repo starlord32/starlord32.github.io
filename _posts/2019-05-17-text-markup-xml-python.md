@@ -82,10 +82,11 @@ for f in listOfFiles:
 This is the closest I got so far. However, it seems that the search for "div3" does not find all articles.
 Finding issue dates and creating a counter seems to work fine however. The XML markup is removed nicely.
 
-***Updates version: articles = soup.find_all(type="article")***
+***Updated version:***
+
 Since "div3" also returns empty files I am using "type="article" as search criteria. The file ouput is much smaller and only 71,177 instead of 342,810. All files have text inside but I am still not 100% if each file represents one specific article. I also changed the date format a little bit.
 
-old search: articles = soup.find_all("div3")
-new search: articles = soup.find_all(type="article")
+* old search: articles = soup.find_all("div3")
+* new search: articles = soup.find_all(type="article")
 
 ![files_true](/img/files_true.png)
