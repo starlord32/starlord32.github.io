@@ -69,3 +69,10 @@ for f in listOfFiles:
         with open(newfile, "w", encoding="utf8") as f9:
             f9.write(str(article))
 ```
+
+## Result:
+
+This is the closest I got so far. However, it seems that the search for "div3" does not find all articles.
+Finding issue dates and creating a counter seems to work fine however. The XML markup is removed nicely.
+
+![files](/img/files.png)
