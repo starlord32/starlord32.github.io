@@ -47,8 +47,8 @@ Write a python script that will create clean copies of articles (!) from all iss
 from bs4 import BeautifulSoup
 import re
 import os
-newPathToFolder = "C:/Users/Daniel/Documents/Dh_Tools/lesson8/articles_true/"
-pathToFolder = "C:/Users/Daniel/Documents/Dh_Tools/lesson7/4th/"
+newPathToFolder = "~/Documents/Dh_Tools/lesson8/articles_true/"
+pathToFolder = "~/Documents/Dh_Tools/lesson7/4th/"
 listOfFiles = os.listdir(pathToFolder)
 
 # for loop that opens all files of a defined folder and stores it with BeautifulSoup in variable soup
