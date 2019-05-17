@@ -34,6 +34,12 @@ for f in listOfFiles:
          f9.write(text)
 ```
 
+## Result:
+
+Except for setting a new target folder everything worked fine.
+
+![files0](/img/files0.png)
+
 ***Task 2:***
 Write a python script that will create clean copies of articles (!) from all issues of the “Dispatch”. (again, make sure to keep the originals intact!).
 
