@@ -8,12 +8,14 @@ tags: [historian, python, codecademy, science, json]
 comments: true
 ---
 
-***The following script structures data into a single JSON file***
+# The following script structures data into a single JSON file
 
 **This Script is related to the webscraping and Text Markup blog post**
 
-The final variable "var" is created and structures the data as JSON data.
-At the beginning and outside the loop variable called "allFiles" as an empty list is created to store all the ouputs from the loop via the "var" variable.
+At the beginning and outside the loop a variable called "allFiles", as an empty list, is created to store all the ouputs from the loop via the "var" variable in one list.
+
+In the second loop the variable "var" (at the very end of the loop) is created and structures the data as JSON data.
+
 
 Finally, the with open statement creates one single JSON file called summary.json. This final statement must be outside the loop.
 
