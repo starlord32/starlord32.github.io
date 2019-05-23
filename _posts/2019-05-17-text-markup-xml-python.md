@@ -89,4 +89,38 @@ Since "div3" also returns empty files I am using "type="article" as search crite
 * old search: articles = soup.find_all("div3")
 * new search: articles = soup.find_all(type="article")
 
+***Updated version 2:***
+
+This final code example is now adapted to get the date much easier as well as accesses now div3 with type=article in one line of code. The result however stays the same as per output files like the previous update. 
+
+```
+from bs4 import BeautifulSoup
+import re
+import os
+newPathToFolder = "~/Documents/Dh_Tools/lesson8/articles_try_2/"
+pathToFolder = "~/Documents/Dh_Tools/lesson7/4th/"
+listOfFiles = os.listdir(pathToFolder)
+
+# for loop that opens all files of a defined folder and stores it with BeautifulSoup in variable soup
+for f in listOfFiles:
+    soup = BeautifulSoup (open(pathToFolder+f, "r", encoding="utf8"), features="html.parser")
+    # searches for list items of "date" and return maximum two elemens
+    issue_date = soup.find_all("date", limit=2)[1] # only returns the second match
+    issue_date = issue_date.get("value")
+    # searches for all tags with "div3" and stores it in variable "articles"
+    articles = soup.find_all("div3", {"type":"article"})
+    # for loop to count each articles with "a"
+    # automatically seperates all articles in "item"
+    for a, item in enumerate(articles[1:]): # with the latest part after articles the counter starts at 1 instead of 0
+        # assiging the counter to a variable
+        counter = a
+        # cleaning all articles of xml tags
+        article = re.sub("<[^<]+>", "", str(item))
+        # creates a new file in a target folder with name + article counter + name + issue_date + txt file
+        newfile = newPathToFolder  + "dispatch_" + str(issue_date) + "_article_no_" + str(counter) + ".txt"
+        # opens the newfile and writes each article into a sperate file
+        with open(newfile, "w", encoding="utf8") as f9:
+            f9.write(article)
+```
+
 ![files_true](/img/files_true.png)

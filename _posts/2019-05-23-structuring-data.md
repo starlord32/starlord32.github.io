@@ -9,10 +9,13 @@ comments: true
 ---
 
 ***The following script structures data into a single JSON file***
+
 **This Script is related to the webscraping and Text Markup blog post**
 
-Starting from line 72 the final variable "var" is created which structures the data in a single .json file.
-On line 25 a variable called "allFiles" as an empty list is created to store all the ouputs from the loop via the "var" variable.
+The final variable "var" is created and structures the data as JSON data.
+At the beginning and outside the loop variable called "allFiles" as an empty list is created to store all the ouputs from the loop via the "var" variable.
+
+Finally, the with open statement creates one single JSON file called summary.json. This final statement must be outside the loop.
 
 ```
 import re, os, json
@@ -85,7 +88,6 @@ for f in lof:
         if counter % 100 == 0:
             print(counter)
 
-#print(allFiles)
-with open(target+"summary9.json", "w", encoding="utf8") as f9:
+with open(target+"summary.json", "w", encoding="utf8") as f9:
     f9.write(str(allFiles))
 ```
