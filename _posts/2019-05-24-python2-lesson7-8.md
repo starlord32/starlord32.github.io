@@ -10,6 +10,6 @@ comments: true
 
 # Pyhton 2 course on Codecademy
 
-## Cources 5 and 6
+## Course 7 and 8
 
 ![Python 7 and 8](/img/python2-7_8.PNG)
