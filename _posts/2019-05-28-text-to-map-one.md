@@ -55,9 +55,6 @@ for key, value in dicFreq.items():
         # newVal will looks like: `000005486 TAB Richmond`
         resultsCSV.append(newVal)
 
-        #for r in resultsCSV:
-        #    cleanResults = re.sub("\t", "", r)
-
 resultsCSV = sorted(resultsCSV, reverse=True)
 print(len(resultsCSV)) # will print out the number of items in the list
 resultsToSave = "\n".join(resultsCSV)
