@@ -74,7 +74,7 @@ with open(newfile2, "w", encoding="utf8") as f8:
 
 **Result with BeautifulSoup**
 
-![Python 7 and 8](/img/results_hw10.png/)
+![results1](/img/results_hw10.png)
 
 **Example with Regex**
 
@@ -139,7 +139,7 @@ generate("1865")
 
 **Results for Regex**
 
-![Python 7 and 8](/img/results_hw10.2.png/)
+![Results2](/img/results_hw10.2.png)
 
 **Regex Example Continued**
 
@@ -214,7 +214,7 @@ generateTGNdata(source)
 
 **Results to Regex Continued**
 
-![Python 7 and 8](/img/results_hw10.3.png/)
+![Results3](/img/results_hw10.3.png)
 
 **Generating a dictionary for the TGN data and matching them with the dispatch files**
 
@@ -275,4 +275,4 @@ match("dispatch_toponyms_186.tsv", dictionary)
 
 **Matching results**
 
-![Python 7 and 8](/img/results_hw10.4.png/)
+![Results4](/img/results_hw10.4.png)
