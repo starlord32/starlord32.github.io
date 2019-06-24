@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Topic Modelling HW 12
-subtitle: Creating a topic modell with Python
+subtitle: Creating a topic model with Python
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
 tags: [historian, python, codecademy, science, topic modelling]
