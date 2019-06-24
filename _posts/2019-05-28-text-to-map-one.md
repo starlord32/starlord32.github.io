@@ -1,14 +1,16 @@
 ---
 layout: post
 title: Text to Map HW 11
-subtitle: How to retrieve text and values and arrange them with coordinates
+subtitle: How to retrieve text and values of two databases. Finding and merging coordinates.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
 tags: [historian, python, codecademy, science, coordinates, qgis]
 comments: true
 ---
 
-**Example with BeautifulSoup**
+*Python Functions for retrieving data from two databases and matching values to create a Map*
+
+**Code example one to retrieve Placenames and TGN number with BeautifulSoup**
 
 ```
 from bs4 import BeautifulSoup
@@ -76,61 +78,62 @@ with open(newfile2, "w", encoding="utf8") as f8:
 
 ![results1](/img/results_hw10.png)
 
-**Example with Regex**
+**Code example two to retrieve Placenames and TGN number with Regex**
 
 ```
 import re, os
 
-source = "source files"
-target = "target folder to save files"
+source = "dispatach source files folder path"
+target = "target path to save the new created files"
 
 
-lof = os.listdir(source)
-counter = 0 # general counter to keep track of the progress
+lof = os.listdir(source)                                                        # listing the source directory
+counter = 0                                                                     # general counter to keep track of the progress
 
-def generate(filter):
+def generate(filter):                                                           # defining a function with one argument
 
-    topCountDictionary = {}
+    topCountDictionary = {}                                                     # empty dictionary
 
     print(filter)
     counter = 0
-    for f in lof:
-        if f.startswith("dltext"): # fileName test
-            with open(source + f, "r", encoding="utf8") as f1:
-                text = f1.read()
+    for f in lof:                                                               # for loop to search in all files of a selected folder
+        if f.startswith("dltext"): # fileName test                              # if condition to search in files starting with the string "dltext" only
+            with open(source + f, "r", encoding="utf8") as f1:                  # if the above condition is true it opens the files and reads them
+                text = f1.read()                                                # the loaded file is stored in the variable "text"
 
-                text = text.replace("&amp;", "&")
+                text = text.replace("&amp;", "&")                               # search and replace function that removes "amp;"
 
                 # try to find the date
-                date = re.search(r'<date value="([\d-]+)"', text).group(1)
+                date = re.search(r'<date value="([\d-]+)"', text).group(1)      # search with regular expression to find the date of each article
                 #print(date)
 
-                if date.startswith(filter):
-                    for tg in re.findall(r"(tgn,\d+)", text):
-                        tgn = tg.split(",")[1]
+                if date.startswith(filter):                                     # if condition that allows to search for specific dates in the articles
+                    for tg in re.findall(r"(tgn,\d+)", text):                   # for loop to find all tgn numbers in the articles of the previous specified date
+                        tgn = tg.split(",")[1]                                  # creates a new variable and split the previous found string by comma and uses the second item which is the tgn number
 
-                        if tgn in topCountDictionary:
+                        if tgn in topCountDictionary:                           # if condition to create a counter if a new tgn number was found
                             topCountDictionary[tgn] += 1
-                        else:
+                        else:                                                   # else the counter remains 1
                             topCountDictionary[tgn]  = 1
 
                         #input(topCountDictionary)
 
     top_TSV = []
 
-    for k,v in topCountDictionary.items():
-        val = "%09d\t%s" % (v, k)
+    for k,v in topCountDictionary.items():                                      # for loop to search for item of the topCountDictionary dictionary
+        val = "%09d\t%s" % (v, k)                                               # defines the format of the frequency counter
         #input(val)
-        top_TSV.append(val)
+        top_TSV.append(val)                                                     # appends the frequency to a list
 
     # saving
-    header = "freq\ttgn\n"
-    with open("dispatch_toponyms_%s.tsv" % filter, "w", encoding="utf8") as f9:
+    header = "freq\ttgn\n"                                                      # creates a header for the final tsv table
+    with open("dispatch_toponyms_%s.tsv" % filter, "w", encoding="utf8") as f9: # writing the data into a tsv file
         f9.write(header+"\n".join(top_TSV))
     #print(counter)
 
-generate("186")
-generate("1861")
+#generate("186")
+
+generate("1861")                                                                # example to use defined function with a specifc date
 generate("1862")
 generate("1863")
 generate("1864")
@@ -141,136 +144,140 @@ generate("1865")
 
 ![Results2](/img/results_hw10.2.png)
 
-**Regex Example Continued**
+**Code example three to simplify the TGN database with regular expression**
 
 ```
 import re, os
 
-source = "tgn downloaded XML files"
-target = "target folder for saving"
+source = "tgn xml files source path"
+target = "target folder to save the new file"
 
-def generateTGNdata(source):
+def generateTGNdata(source):                                                    # creating a function with one argument
 
-    lof = os.listdir(source)
+    lof = os.listdir(source)                                                    # loading the source directory
 
-    tgnList = []
-    tgnListNA = []
-    count = 0
+    tgnList = []                                                                # creating a new list
+    tgnListNA = []                                                              # creating a new list
+    count = 0                                                                   # creating a counter
 
-    for f in lof:
-        if f.startswith("TGN"): # fileName test
+    for f in lof:                                                               # for loop to search a files of the source directory
+        if f.startswith("TGN"):                                                 # fileName test
             print(f)
-            with open(source+f, "r", encoding="utf8") as f1:
-                data = f1.read()
+            with open(source+f, "r", encoding="utf8") as f1:                    # opens all files that are true in the previous fileName test
+                data = f1.read()                                                # stores the read data in a new variable
 
-                data = re.split("</Subject>", data)
+                data = re.split("</Subject>", data)                             # splits the data by closing tag
 
-                for d in data:
-                    d = re.sub("\n +", "", d)
+                for d in data:                                                  # for loop to search each subject previously splitted
+                    d = re.sub("\n +", "", d)                                   # subetting with a regular expression to remove/replace all new lines
                     #print(d)
 
-                    if "Subject_ID" in d:
+                    if "Subject_ID" in d:                                       # if condition to search if a Subject_ID tag is available
                         # SUBJECT ID
-                        placeID = re.search(r"Subject_ID=\"(\d+)\"", d).group(1)
+                        placeID = re.search(r"Subject_ID=\"(\d+)\"", d).group(1) # regular expression search for the Subject_ID value defined as group one
                         #print(placeID)
 
                         # NAME OF THE PLACE
-                        placeName = re.search(r"<Term_Text>([^<]+)</Term_Text>", d).group(1)
+                        placeName = re.search(r"<Term_Text>([^<]+)</Term_Text>", d).group(1) # regular expression search for place names defined in the xml as Term_Text tag
                         #print(placeName)
 
                         # COORDINATES
-                        if "<Coordinates>" in d:
-                            latGr = re.search(r"<Latitude>(.*)</Latitude>", d).group(1)
-                            lat = re.search(r"<Decimal>(.*)</Decimal>", latGr).group(1)
+                        if "<Coordinates>" in d:                                # if condition to search if a Coordinates tag is available
+                            latGr = re.search(r"<Latitude>(.*)</Latitude>", d).group(1) # regular expression to search for the value of the Latitude tag as group one
+                            lat = re.search(r"<Decimal>(.*)</Decimal>", latGr).group(1) # regular expression to search for a the value of the Decimal tag but only with the previous Latitude result
 
-                            lonGr = re.search(r"<Longitude>(.*)</Longitude>", d).group(1)
-                            lon = re.search(r"<Decimal>(.*)</Decimal>", lonGr).group(1)
+                            lonGr = re.search(r"<Longitude>(.*)</Longitude>", d).group(1) # regular expression to search for the value of the Longitude tag as group one
+                            lon = re.search(r"<Decimal>(.*)</Decimal>", lonGr).group(1) # regular expression to search for a the value of the Decimal tag but only with the previous Longitude result
                             #print(lat)
                             #print(lon)
-                        else:
+                        else:                                                   # else lat and long is NA
                             lat = "NA"
                             lon = "NA"
 
-                        tgnList.append("\t".join([placeID, placeName, lat, lon]))
+                        tgnList.append("\t".join([placeID, placeName, lat, lon])) # appending the final strings to a list joined as tab seperated
                         #input(tgnList)
 
-                        if lat == "NA":
+                        if lat == "NA":                                         # all NA values are stored in a seperate list
                             print("\t"+ "; ".join([placeID, placeName, lat, lon]))
                             tgnListNA.append("\t".join([placeID, placeName, lat, lon]))
 
     # saving
-    header = "tgnID\tplacename\tlat\tlon\n"
+    header = "tgnID\tplacename\tlat\tlon\n"                                     # creating a header for the tsv tables
 
-    with open("tgn_data_light.tsv", "w", encoding="utf8") as f9a:
+    with open("tgn_data_light.tsv", "w", encoding="utf8") as f9a:               # saving the list as tsv original
          f9a.write(header+"\n".join(tgnList))
 
-    with open("tgn_data_light_NA.tsv", "w", encoding="utf8") as f9b:
+    with open("tgn_data_light_NA.tsv", "w", encoding="utf8") as f9b:            # saving the NA list as tsv
          f9b.write(header+"\n".join(tgnListNA))
 
-    print("TGN has %d items" % len(tgnList))
+    print("TGN has %d items" % len(tgnList))                                    # print function to see how many items are found
 
-generateTGNdata(source)
+generateTGNdata(source)                                                         # example of how to use the new function
 ```
 
 **Results to Regex Continued**
 
 ![Results3](/img/results_hw10.3.png)
 
-**Generating a dictionary for the TGN data and matching them with the dispatch files**
+**Code example four to generate a dictionary of TGN numbers and coordinates and match it with TGN numbers and placenames**
 
 ```
 import re, os
 
-def loadTGN(tgnTSV):
-    with open(tgnTSV, "r", encoding="utf8") as f1:
-        data = f1.read().split("\n")
+def loadTGN(tgnTSV):                                                            # creates a new function with one argument
+    with open(tgnTSV, "r", encoding="utf8") as f1:                              # opens a file defined in the function argument
+        data = f1.read().split("\n")                                            # reads the file and stores the data splitted by new lines
 
-        dic = {}
+        dic = {}                                                                # creates an empty dictionary
 
-        for d in data:
-            d = d.split("\t")
+        for d in data:                                                          # for loop to search items of the loaded data
+            d = d.split("\t")                                                   # splits the data by tab
 
-            dic[d[0]] = d
+            dic[d[0]] = d                                                       # saves the data in the dictionary starting at the first entry
 
-    return(dic)
+    return(dic)                                                                 # to return the dictionary
 
-def match(freqFile, dicToMatch):
-    with open(freqFile, "r", encoding="utf8") as f1:
-        data = f1.read().split("\n")
+def match(freqFile, dicToMatch):                                                # new function with two arguments
+    with open(freqFile, "r", encoding="utf8") as f1:                            # opens the first file later defined as the first argument
+        data = f1.read().split("\n")                                            # loads the data as variable and splits it by new lines
 
-        dataNew = []
-        dataNewNA = []
-        count = 0
+        dataNew = []                                                            # creating a new empty list
+        dataNewNA = []                                                          # creating a new empty list
+        count = 0                                                               # creating a counter
 
-        for d in data[1:]:
-            tgnID = d.split("\t")[1]
-            freq  = d.split("\t")[0]
+        for d in data[1:]:                                                      # for loop to search each item of the loaded data
+            tgnID = d.split("\t")[1]                                            # splits each item by tab for the second colum of the loaded data
+            freq  = d.split("\t")[0]                                            # splits each item by tab for the first column of the loaded data
 
-            if tgnID in dicToMatch:
-                val = "\t".join(dicToMatch[tgnID])
-                val  = val + "\t" + freq
+            if tgnID in dicToMatch:                                             # if condition to match the tgnID of the loaded data (first argument) with the tgnID of a new file (second argument)
+                val = "\t".join(dicToMatch[tgnID])                              # found matches are stored in a new variable that joins them tab seperated
+                val  = val + "\t" + freq                                        # reformatting the variable to add the frequency to the tgnID
 
-                if "\tNA\t" in val:
-                    dataNewNA.append(val)
+                if "\tNA\t" in val:                                             # if condition to searchfor NA values in the new variable
+                    dataNewNA.append(val)                                       # if found it appends it to the NA list
                 else:
-                    dataNew.append(val)
+                    dataNew.append(val)                                         # else it appends it to the regular list
             else:
-                print("%s (%d) not in TGN!" % (tgnID, int(freq)))
+                print("%s (%d) not in TGN!" % (tgnID, int(freq)))               # prints information in the console about not found data in the tgn file
                 count += 1
 
-    header = "tgnID\tplacename\tlat\tlon\tfreq\n"
+    header = "tgnID\tplacename\tlat\tlon\tfreq\n"                               # creates a header for the tsv file
 
-    with open("coord_"+freqFile, "w", encoding="utf8") as f9a:
+    with open("coord_"+freqFile, "w", encoding="utf8") as f9a:                  # saves the tsv file with found results
         f9a.write(header + "\n".join(dataNew))
 
-    with open("coord_NA_"+freqFile, "w", encoding="utf8") as f9b:
+    with open("coord_NA_"+freqFile, "w", encoding="utf8") as f9b:               # saves the tsv file of the not found NA data
         f9b.write(header + "\n".join(dataNewNA))
 
-    print("%d item have not been matched..." % count)
+    print("%d item have not been matched..." % count)                           # prints to the console the amount of files not found
 
-dictionary = loadTGN("tgn_data_light.tsv")
+dictionary = loadTGN("tgn_data_light.tsv")                                      # loads the function for the tgn data file and stores it as dictionary in a new variable
 
-match("dispatch_toponyms_186.tsv", dictionary)
+match("dispatch_toponyms_1861.tsv", dictionary)                                 # example of how to use the match function
+match("dispatch_toponyms_1862.tsv", dictionary)                                 # the first argument is the filename (must be stored in same folder path)
+match("dispatch_toponyms_1863.tsv", dictionary)                                 # the second argument uses the previous loaded dictionary to match items with
+match("dispatch_toponyms_1864.tsv", dictionary)
+match("dispatch_toponyms_1865.tsv", dictionary)
 ```
 
 **Matching results**
