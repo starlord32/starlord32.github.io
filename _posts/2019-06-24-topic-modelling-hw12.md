@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Topic Modelling HW 11
+title: Topic Modelling HW 12
 subtitle: Creating a topic modell with Python
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

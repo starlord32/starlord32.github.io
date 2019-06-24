@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to transfrom XML files with Python
+title: How to transfrom XML files with Python HW 8
 subtitle: Code example for cleaning Perseus database
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
@@ -91,7 +91,7 @@ Since "div3" also returns empty files I am using "type="article" as search crite
 
 ***Updated version 2:***
 
-This final code example is now adapted to get the date much easier as well as accesses now div3 with type=article in one line of code. The result however stays the same as per output files like the previous update. 
+This final code example is now adapted to get the date much easier as well as accesses now div3 with type=article in one line of code. The result however stays the same as per output files like the previous update.
 
 ```
 from bs4 import BeautifulSoup

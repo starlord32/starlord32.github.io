@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git Course on Codecademy
+title: Git Course on Codecademy HW 2
 subtitle: Screenshot of the resutls.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

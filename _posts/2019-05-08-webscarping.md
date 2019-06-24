@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Webscraping with wget
+title: Webscraping with wget HW 7
 subtitle: Step by step description of a practical example
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

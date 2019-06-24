@@ -1,6 +1,6 @@
 ---
 layout: post
-title: QGIS Georeferencing
+title: QGIS Georeferencing HW 5
 subtitle: Mapping and city coordinates
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

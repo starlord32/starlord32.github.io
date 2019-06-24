@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Structuring
+title: Data Structuring HW 9
 subtitle: How to create a single JSON file
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

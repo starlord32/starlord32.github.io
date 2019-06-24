@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Codecademy Python 2
+title: Codecademy Python 2 HW 5
 subtitle: Course 3 and 4
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

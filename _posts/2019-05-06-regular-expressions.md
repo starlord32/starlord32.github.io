@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to apply regex in Atom
+title: How to apply regex in Atom HW 6
 subtitle: Regex solutions to certain problems
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

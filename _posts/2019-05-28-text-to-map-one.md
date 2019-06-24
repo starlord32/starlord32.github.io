@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text to Map HW 11
+title: Text to Map HW 10
 subtitle: How to retrieve text and values of two databases. Finding and merging coordinates.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]

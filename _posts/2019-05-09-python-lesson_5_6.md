@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python 2
+title: Python 2 HW 6
 subtitle: Confirmation for lesson 5 and 6
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
