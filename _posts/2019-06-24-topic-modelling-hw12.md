@@ -10,6 +10,23 @@ comments: true
 
 ## Topic Modelling with Python and Jupyter Notebook
 
+*Script to change the amount of topics of the model:*
+
+```
+%%time
+# Build LDA model
+number_of_topics = 40
+lda_model = gensim.models.LdaModel(corpus=corpus,
+                                   id2word=dictionary,
+                                   num_topics=number_of_topics,
+                                   update_every=20,
+                                   passes=100,
+                                   alpha='auto')
+print("-"*50)
+path = "./models_new/"
+lda_model.save(path+'dispatch_1864_40.lda')
+```
+
 ***Topic 36 of 40 topics of a new lda_model***
 
 The year 1864 shows a high word count for deserters and prison.
