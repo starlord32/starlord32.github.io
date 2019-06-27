@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text to Map HW 10
+title: Text to Map One HW 10
 subtitle: How to retrieve text and values of two databases. Finding and merging coordinates.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
@@ -8,7 +8,7 @@ tags: [historian, python, codecademy, science, coordinates, qgis]
 comments: true
 ---
 
-*Python Functions for retrieving data from two databases and matching values to create a Map*
+## Python Functions for retrieving data from two databases and matching values to create a Map
 
 **Code example one to retrieve Placenames and TGN number with BeautifulSoup**
 
