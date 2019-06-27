@@ -27,7 +27,7 @@ def latDD(x):
 latDD(!Latitude!)
 ```
 
-**Map creating with QGis for dispatch year 1860**
+**Map created with QGis for dispatch year 1860**
 
 The complete script is described in blog post "Text to Map One HW 10" [Link](https://starlord32.github.io/2019-05-28-text-to-map-one/).
 

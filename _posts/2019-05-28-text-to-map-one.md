@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text to Map One HW 10
-subtitle: How to retrieve text and values of two databases. Finding and merging coordinates.
+subtitle: Using the retrieved data of HW 10 to map it with QGIS.
 gh-repo: starlord32/starlord32.github.io
 gh-badge: [star, fork, follow]
 tags: [historian, python, codecademy, science, coordinates, qgis]
