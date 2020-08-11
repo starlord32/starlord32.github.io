@@ -14,10 +14,10 @@ baseurl: "https://starlord32.github.io"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Starlords Blog for programming historians
+title: Programming as Historian
 
 # Short description of your site
-description: The programming historian uses various digital tools and programming languages to do research and analyze data in order to apply a new thesis.
+description: Historians with programming skills use various digital tools and programming languages to do research and analyze data in order to apply a new thesis.
 
 # --- Navigation bar options --- #
 
